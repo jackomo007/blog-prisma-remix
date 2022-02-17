@@ -1,12 +1,12 @@
 import { renderToString } from "react-dom/server";
 import { RemixServer } from "remix";
 
-export default function handleRequest(
+export const handleRequest = (
   request,
   responseStatusCode,
   responseHeaders,
   remixContext
-) {
+) => {
   const markup = renderToString(
     <RemixServer context={remixContext} url={request.url} />
   );
@@ -18,3 +18,5 @@ export default function handleRequest(
     headers: responseHeaders
   });
 }
+
+export default handleRequest

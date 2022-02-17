@@ -3,6 +3,9 @@
   "name": "remix-app-template-js",
   "description": "",
   "license": "",
+  "prisma": {
+    "seed": "node prisma/seed"
+  },
   "dependencies": {
     "@prisma/client": "^3.9.2",
     "@remix-run/react": "^1.2.1",
