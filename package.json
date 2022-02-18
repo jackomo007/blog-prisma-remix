@@ -26,7 +26,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "postinstall": "remix setup node",
+    "postinstall": "remix setup node && node prisma/seed && npx prisma generate && npx prisma db push",
     "build": "cross-env NODE_ENV=production remix build",
     "dev": "cross-env NODE_ENV=development remix dev"
   }
